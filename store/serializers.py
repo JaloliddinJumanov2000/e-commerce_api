@@ -5,4 +5,4 @@ class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
         fields = '__all__'
-        depth = 3
+        depth = 5
