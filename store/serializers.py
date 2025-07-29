@@ -1,10 +1,8 @@
-
 from rest_framework import serializers
+from .models import Category
 
-from store.models import Category
-
-
-class StoreSerializer(serializers.ModelSerializer):
+class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
         fields = '__all__'
+        depth = 3
