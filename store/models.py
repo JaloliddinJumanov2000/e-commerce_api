@@ -1,7 +1,7 @@
 from django.db import models
 
 class Category(models.Model):
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100,unique=True)
     parent = models.ForeignKey(
         'self',
         on_delete=models.CASCADE,
@@ -14,3 +14,4 @@ class Category(models.Model):
         if self.parent:
             return f"{self.name} : {self.parent}"
         return f"{self.name}"
+
